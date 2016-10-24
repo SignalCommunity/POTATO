@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {"potato_fakeNVG"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"potato_core", "mbg_celle2", "ace_ui", "rhs_c_weapons", "Taliban_fighters"};
+        requiredAddons[] = {"potato_core", "mbg_celle2", "ace_ui", "rhs_c_weapons"};
         author = "Potato";
         authors[] = {"PabstMirror"};
         authorUrl = "https://github.com/BourbonWarfare/POTATO";
@@ -52,6 +52,24 @@ class CfgVehicles {
         class TransportItems {};
         class TransportBackpacks {};
     };
+    
+    class GVAR(acreBox): Box_NATO_Support_F {
+        scope = 1;
+        displayName = "ACRE Radio Box";
+        transportMaxWeapons = 9001;
+        transportMaxMagazines = 9001;
+        transportMaxItems = 9001;
+        maximumload = 1000;
+
+        class TransportWeapons {};
+        class TransportMagazines {};
+        class TransportItems {
+            MACRO_ADDITEM(ACRE_PRC343,20);
+            MACRO_ADDITEM(ACRE_PRC148,10);
+            MACRO_ADDITEM(ACRE_PRC117F,10);       
+        };
+        class TransportBackpacks {};
+    };
 };
 
 
@@ -95,24 +113,6 @@ class CfgWeapons {
         type = 801;
     };
 
-    class Uniform_Base;
-    class U_Afghan06: Uniform_Base {
-        author = "EricJ";
-        scope = 2;
-        displayName = "Afghan Clothes 6";
-        picture = "\A3\characters_f\data\ui\icon_U_Citizen_ca.paa";
-        model = "\Taliban_Fighters\Uniforms\Afghan_06NH.p3d";
-        hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"Taliban_Fighters\data\tak_civil06_1_co.paa"};
-        class ItemInfo: UniformItem {
-            uniformModel = "-";
-            uniformClass = "TBan_Fighter6NH";
-            armor = 0;
-            passThrough = 1;
-            containerClass = "Supply30";
-            mass = 30;
-        };
-    };
 };
 
 class CfgMagazines {

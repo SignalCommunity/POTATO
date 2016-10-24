@@ -14,6 +14,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+<<<<<<< HEAD
 
 // ACE Settings: (see http://forums.bourbonwarfare.com/viewtopic.php?f=8&t=2026)
 class ACE_Settings {
@@ -358,3 +359,6 @@ class ACE_Settings {
         isClientSettable = 1;
     };
 };
+=======
+#include "ACE_Settings_BW.hpp"
+>>>>>>> origin/master
