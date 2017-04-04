@@ -204,7 +204,7 @@ _this spawn {
     // ===================================================================================
     // GROUND SUPPORT
 
-    _groundExists = (({_x in _playerGroupsID} count [_sideString + "IFV1",_sideString + "IFV2",_sideString + "IFV3",_sideString + "IFV4",_sideString + "TNK1"]) > 0);
+    _groundExists = (({_x in _playerGroupsID} count [_sideString + "IFV1",_sideString + "IFV2",_sideString + "IFV3",_sideString + "IFV4",_sideString + "TNK1", _sideString + "TNK2", _sideString + "TNK3", _sideString + "TNK4"]) > 0);
     if (_groundExists) then {
         _diaryHyperlinkedText = _diaryHyperlinkedText + format ["<br/><font face='PuristaBold' color='#FFFFFF' size='14'>Ground Support</font><br/>"];
 
@@ -213,7 +213,10 @@ _this spawn {
             [_sideString + "IFV2","#FFFFFF","IFV 2"],
             [_sideString + "IFV3","#FFFFFF","IFV 3"],
             [_sideString + "IFV4","#FFFFFF","IFV 4"],
-            [_sideString + "TNK1","#FFFFFF","Tank 1"]
+            [_sideString + "TNK1","#FFFFFF","Tank 1"],
+            [_sideString + "TNK2","#FFFFFF","Tank 2"],
+            [_sideString + "TNK3","#FFFFFF","Tank 3"],
+            [_sideString + "TNK4","#FFFFFF","Tank 4"]
         ];
 
         _diaryHyperlinkedText = [_groundMaster,_playerGroupsID,_playerGroups,_diaryHyperlinkedText] call _bsm_write;
@@ -222,7 +225,7 @@ _this spawn {
     // ===================================================================================
     // AIR SUPPORT
 
-    _airExists = (({_x in _playerGroupsID} count [_sideString + "TH1",_sideString + "TH2",_sideString + "TH3",_sideString + "TH4",_sideString + "AH1"]) > 0);
+    _airExists = (({_x in _playerGroupsID} count [_sideString + "TH1",_sideString + "TH2",_sideString + "TH3",_sideString + "TH4",_sideString + "AH1",_sideString + "AH2",_sideString + "AH3",_sideString + "AH4",_sideString + "FW1",_sideString + "FW2",_sideString + "FW3",_sideString + "FW4"]) > 0);
     if (_airExists) then {
         _diaryHyperlinkedText = _diaryHyperlinkedText + format ["<br/><font face='PuristaBold' color='#FFFFFF' size='14'>Air Support</font><br/>"];
 
@@ -231,7 +234,14 @@ _this spawn {
             [_sideString + "TH2","#FFFFFF","Trans. Helo 2"],
             [_sideString + "TH3","#FFFFFF","Trans. Helo 3"],
             [_sideString + "TH4","#FFFFFF","Trans. Helo 4"],
-            [_sideString + "AH1","#FFFFFF","Attack Helo 1"]
+            [_sideString + "AH1","#FFFFFF","Attack Helo 1"],
+            [_sideString + "AH2","#FFFFFF","Attack Helo 2"],
+            [_sideString + "AH3","#FFFFFF","Attack Helo 3"],
+            [_sideString + "AH4","#FFFFFF","Attack Helo 4"],
+            [_sideString + "FW1","#FFFFFF","Fixed Wing 1"],
+            [_sideString + "FW2","#FFFFFF","Fixed Wing 2"],
+            [_sideString + "FW3","#FFFFFF","Fixed Wing 3"],
+            [_sideString + "FW4","#FFFFFF","Fixed Wing 4"]
         ];
 
         _diaryHyperlinkedText = [_airMaster,_playerGroupsID,_playerGroups,_diaryHyperlinkedText] call _bsm_write;
